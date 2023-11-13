@@ -82,3 +82,15 @@ class Base():
         except:
             return ""
 
+    def get_attr(self, loc, attr):
+        try:
+            ele = self.find(loc)
+            if ele.is_displayed():
+                attr_value = ele.get_attribute(attr)
+                return attr_value
+            else:
+                return ""
+        except:
+            return ""
+
+
